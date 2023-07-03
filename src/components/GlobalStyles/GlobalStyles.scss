@@ -31,6 +31,7 @@ body {
 button,
 input,
 [tabindex] {
+    display: flex;
     outline: none;
     border: none;
 }
