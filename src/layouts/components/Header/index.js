@@ -14,7 +14,7 @@ import { Link } from 'react-router-dom';
 import Tippy from '@tippyjs/react';
 import 'tippy.js/dist/tippy.css';
 
-import routesConfig from '~/config/routes';
+import config from '~/config';
 import Button from '~/components/Button';
 import Menu from '~/components/Popper/Menu';
 import styles from './Header.module.scss';
@@ -97,7 +97,7 @@ function Header() {
     return (
         <header className={cx('wrapper')}>
             <div className={cx('inner')}>
-                <Link to={routesConfig.home} className={cx('logo-link')}>
+                <Link to={config.routes.home} className={cx('logo-link')}>
                     <img src={images.logo} alt="Tiktok" />
                 </Link>
 
@@ -134,9 +134,9 @@ function Header() {
                         {currentUser ? (
                             <Image
                                 className={cx('user-avatar')}
-                                src="ttps://p16-sign-va.tiktokcdn.com/tos-maliva-avt-0068/0a43d55f09ffd86f79a11b13d59a4048~c5_100x100.jpeg?x-expires=1688396400&x-signature=GHRnIGFoLb15%2BGfqV7M2DiybZWg%3D"
+                                src="https://p16-sign-va.tiktokcdn.com/tos-maliva-avt-0068/0a43d55f09ffd86f79a11b13d59a4048~c5_100x100.jpeg?x-expires=1688396400&x-signature=GHRnIGFoLb15%2BGfqV7M2DiybZWg%3D"
                                 alt="Nguyen Van A"
-                                fallback="https://p16-sign-useast2a.tiktokcdn.com/tos-useast2a-avt-0068-giso/5e37ff4da73ba2fad83dd7728cfee477~c5_100x100.jpeg?x-expires=1688529600&x-signature=5pUVGsS%2BsKamJDQfoEp%2F5Jj%2B30M%3D"
+                                // fallback="https://p16-sign-useast2a.tiktokcdn.com/tos-useast2a-avt-0068-giso/5e37ff4da73ba2fad83dd7728cfee477~c5_100x100.jpeg?x-expires=1688529600&x-signature=5pUVGsS%2BsKamJDQfoEp%2F5Jj%2B30M%3D"
                             />
                         ) : (
                             <button className={cx('more-btn')}>
